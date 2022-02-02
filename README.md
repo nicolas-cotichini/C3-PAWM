@@ -12,7 +12,7 @@ Il progetto si pone dunque come obiettivo quello di fornire un supporto per rend
 
    Il fronten è stato realizzato con Typescript, React ed il frameword Ionic.
    
-   I [microservizi di C3](https://github.com/nicolas-cotichini/c3.git) sono stati realizzati in Java tramite la suite di tecnologie e framework configurate tramite SpringBoot.
+   I [microservizi di C3](https://github.com/nicolas-cotichini/C3) sono stati realizzati in Java tramite la suite di tecnologie e framework configurate tramite SpringBoot.
 
    Il database è stato realizzato con MySQL.
 
