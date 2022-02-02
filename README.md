@@ -18,7 +18,7 @@ Il progetto si pone dunque come obiettivo quello di fornire un supporto per rend
 
    Il dialogo tra frontend e backend avviene attraverso chiamate Rest, la cui sicurezza è affidata all'uso di JSON Web Token.
 
-   Maggiori dettagli sulle funzionalità riguardanti le varie tipologie di user sono presenti [qui](https://github.com/nicolas-cotichini/c3.git).
+   Maggiori dettagli sulle funzionalità riguardanti le varie tipologie di user sono presenti [qui](https://github.com/nicolas-cotichini/C3).
  
 ---
 
