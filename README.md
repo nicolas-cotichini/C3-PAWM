@@ -22,5 +22,5 @@ Il progetto si pone dunque come obiettivo quello di fornire un supporto per rend
  
 ---
 
-Icone [Flaticon](https://www.flaticon.com/free-icons/shopping-bag" title="shopping bag icons)
-Immagini [Unsplash](https://unsplash.com/)
+Icone [Flaticon](https://www.flaticon.com).      
+Immagini [Unsplash](https://unsplash.com).
