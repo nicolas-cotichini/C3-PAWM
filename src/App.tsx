@@ -2,7 +2,6 @@ import { Route } from "react-router-dom";
 import {
   IonApp,
   IonCol,
-  IonContent,
   IonHeader,
   IonIcon,
   IonLabel,
@@ -35,7 +34,6 @@ import ListaMagazzini from "./components/corriere/ListaMagazzini";
 import CercaOrdine from "./components/magazziniere/CercaOrdine";
 import { RegistrazionePersonale } from "./components/amministratore/RegistrazionePersonale";
 import { RegistrazioneLuogo } from "./components/amministratore/RegistrazioneLuogo";
-import ListaNegoziMerce from "./components/cliente/ListaNegoziMerce";
 import { EliminazioneLuogo } from "./components/amministratore/EliminazioneLuogo";
 import { EliminazionePersonale } from "./components/amministratore/EliminazionePersonale";
 
