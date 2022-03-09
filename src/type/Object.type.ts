@@ -1,5 +1,3 @@
-import { ServerStreamFileResponseOptionsWithError } from "http2";
-
 export type Profilo = {
   id: number;
   nome: string;

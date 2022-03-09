@@ -7,11 +7,7 @@ import {
   IonInput,
   IonItem,
   IonLabel,
-  IonSelect,
-  IonSelectOption,
-  IonList,
   IonButton,
-  IonIcon,
   IonCol,
   IonRow,
 } from "@ionic/react";
@@ -22,8 +18,6 @@ import { Merce } from "../../type/Object.type";
 export const CreazioneMerce: React.FC = () => {
   const [nomeMerce, setNomeMerce] = useState<string>();
   const [messErrore, setMessErrore] = useState<String>();
-
-  const StringIsNumber = (value: string) => isNaN(Number(value)) === true;
 
   const register = () => {
     if (nomeMerce) {

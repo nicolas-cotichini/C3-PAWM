@@ -10,11 +10,9 @@ import {
   IonContent,
   IonInput,
   IonButton,
-  IonIcon,
   IonCol,
   IonRow,
 } from "@ionic/react";
-import { logIn } from "ionicons/icons";
 import { useState } from "react";
 import CommercianteService from "../../services/CommercianteService";
 import { Acquisto } from "../../type/Object.type";

@@ -227,7 +227,7 @@ export default class ProfiloDettagli extends Component<Props, StateProfilo> {
               <InterfacciaLocker />,
               document.getElementById("root")
             )}
-          ;
+
           <IonRow>
             <IonCol />
             <IonButton onClick={AuthService.logout}>

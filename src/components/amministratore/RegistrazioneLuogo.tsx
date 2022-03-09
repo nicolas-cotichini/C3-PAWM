@@ -18,7 +18,6 @@ import {
 import { logIn } from "ionicons/icons";
 import { useState } from "react";
 import AmministratoreService from "../../services/AmministratoreService";
-import { register } from "../../serviceWorkerRegistration";
 import { Luogo, LuogoTipo } from "../../type/Object.type";
 
 export const RegistrazioneLuogo: React.FC = () => {
