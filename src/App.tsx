@@ -4,6 +4,7 @@ import {
   IonCol,
   IonHeader,
   IonIcon,
+  IonImg,
   IonLabel,
   IonRouterOutlet,
   IonRow,
@@ -79,50 +80,60 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/login" component={LoginPage} />
-            <Route path="/registrazione" component={RegistraCliente} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/registrazione" component={RegistraCliente} />
             <Route
+              exact
               path="/registrazione-personale"
               component={RegistrazionePersonale}
             />
             <Route
+              exact
               path="/eliminazione-personale"
               component={EliminazionePersonale}
             />
-            <Route path="/registrazione-luogo" component={RegistrazioneLuogo} />
-            <Route path="/eliminazione-luogo" component={EliminazioneLuogo} />
-            <Route path="/crea-acquisto" component={CreazioneAcquisto} />
-            <Route path="/crea-merce" component={CreazioneMerce} />
-            <Route path="/cerca-merce" component={CercaMerce} />
-            <Route path="/cerca-ordine" component={CercaOrdine} />
-            <Route path="/profilo">
+            <Route
+              exact
+              path="/registrazione-luogo"
+              component={RegistrazioneLuogo}
+            />
+            <Route
+              exact
+              path="/eliminazione-luogo"
+              component={EliminazioneLuogo}
+            />
+            <Route exact path="/crea-acquisto" component={CreazioneAcquisto} />
+            <Route exact path="/crea-merce" component={CreazioneMerce} />
+            <Route exact path="/cerca-merce" component={CercaMerce} />
+            <Route exact path="/cerca-ordine" component={CercaOrdine} />
+            <Route exact path="/profilo">
               <ProfiloDettagli />
             </Route>
-            <Route path="/lista-acquisti">
+            <Route exact path="/lista-acquisti">
               <ListaAcquisti />
             </Route>
-            <Route path="/lista-ritiri">
+            <Route exact path="/lista-ritiri">
               <ListaRitiri />
             </Route>
-            <Route path="/lista-acquisti-commerciante">
+            <Route exact path="/lista-acquisti-commerciante">
               <ListaAcquistiCommerciante />
             </Route>
-            <Route path="/lista-ordini">
+            <Route exact path="/lista-ordini">
               <ListaOrdini />
             </Route>
-            <Route path="/lista-consegne">
+            <Route exact path="/lista-consegne">
               <ListaConsegne />
             </Route>
-            <Route path="/dettagli-ordine">
+            <Route exact path="/dettagli-ordine">
               <DettagliOrdine />
             </Route>
-            <Route path="/seleziona-luogo-consegna">
+            <Route exact path="/seleziona-luogo-consegna">
               <ListaLuoghiConsegna />
             </Route>
-            <Route path="/lista-magazzini">
+            <Route exact path="/lista-magazzini">
               <ListaMagazzini />
             </Route>
-            <Route path="/lista-merci-negozio">
+            <Route exact path="/lista-merci-negozio">
               <ListaMerciNegozio />
             </Route>
           </IonRouterOutlet>

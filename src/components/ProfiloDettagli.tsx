@@ -60,7 +60,6 @@ export default class ProfiloDettagli extends Component<Props, StateProfilo> {
       this.setState({
         operativo: await CorriereService.getOperativo(),
       });
-    AuthService.aggiornaToken();
   }
 
   render() {

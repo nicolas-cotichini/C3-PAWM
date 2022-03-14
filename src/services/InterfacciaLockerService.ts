@@ -16,8 +16,7 @@ class InterfacciaLockerService {
       })
       .catch((error) => {
         return error.response.data;
-      })
-      .finally(() => AuthService.aggiornaToken());
+      });
   }
 }
 

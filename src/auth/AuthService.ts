@@ -12,11 +12,16 @@ class AuthService {
       })
       .then((response) => {
         sessionStorage.setItem("user", JSON.stringify(response.data));
-        window.location.href = "/home";
+        window.location.href = "/profilo";
       })
       .catch(() => {
         window.alert("Login fallita");
       });
+  }
+
+  logout() {
+    window.sessionStorage.removeItem("user");
+    window.location.href = "/login";
   }
 
   /**
@@ -32,20 +37,6 @@ class AuthService {
         window.alert("Sessione terminata, fare il login");
         this.logout();
       });
-  }
-
-  aggiornaToken() {
-    return axios
-      .get(API_URL + "refresh", { headers: authHeader() })
-      .catch((error) => {
-        alert("Sessione terminata, effettuare Login!");
-        sessionStorage.removeItem("user");
-      });
-  }
-
-  logout() {
-    window.sessionStorage.removeItem("user");
-    window.location.href = "/login";
   }
 
   getCurrentUser() {
