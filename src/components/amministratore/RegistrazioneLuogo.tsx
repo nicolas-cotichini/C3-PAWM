@@ -31,26 +31,21 @@ export const RegistrazioneLuogo: React.FC = () => {
   const StringIsNumber = (value: string) => isNaN(Number(value)) === true;
 
   const register = () => {
-    if (nome) {
-      if (indirizzo) {
-        if (tipo) {
-          setMessErrore("");
-          const luogo: Luogo = {
-            nome: nome,
-            indirizzo: indirizzo,
-            tipo: tipo,
-            orarioApertura: orarioApertura,
-            idCommerciante: idCommerciante,
-            id: 0,
-          };
-          if (
-            luogo.tipo.toString() !== "NEGOZIO" ||
-            idCommerciante !== undefined
-          )
-            AmministratoreService.registraLuogo(luogo);
-          else setMessErrore("Riempi tutti i campi!");
-        } else setMessErrore("Seleziona una Tipologia");
-      } else setMessErrore("Riempi tutti i campi!");
+    if (nome && indirizzo) {
+      if (tipo) {
+        setMessErrore("");
+        const luogo: Luogo = {
+          nome: nome,
+          indirizzo: indirizzo,
+          tipo: tipo,
+          orarioApertura: orarioApertura,
+          idCommerciante: idCommerciante,
+          id: 0,
+        };
+        if (luogo.tipo.toString() !== "NEGOZIO" || idCommerciante !== undefined)
+          AmministratoreService.registraLuogo(luogo);
+        else setMessErrore("Riempi tutti i campi!");
+      } else setMessErrore("Seleziona una Tipologia");
     } else setMessErrore("Riempi tutti i campi!");
   };
 

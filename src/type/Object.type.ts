@@ -47,13 +47,6 @@ export type Personale = {
   idLocker?: number;
 };
 
-export enum PersonaleTipo {
-  "COMMERCIANTE" = 1,
-  "CORRIERE",
-  "MAGAZZINIERE",
-  "AMMINISTRATORE",
-}
-
 export type Luogo = {
   id: number;
   indirizzo: string;
@@ -65,12 +58,19 @@ export type Luogo = {
   interfaccia?: boolean;
 };
 
+export type Merce = {
+  nome: string;
+};
+
+export enum PersonaleTipo {
+  "COMMERCIANTE" = 1,
+  "CORRIERE",
+  "MAGAZZINIERE",
+  "AMMINISTRATORE",
+}
+
 export enum LuogoTipo {
   "MAGAZZINO" = 1,
   "LOCKER",
   "NEGOZIO",
 }
-
-export type Merce = {
-  nome: string;
-};

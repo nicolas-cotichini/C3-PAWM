@@ -15,6 +15,7 @@ import {
 import { logIn } from "ionicons/icons";
 import React, { useState } from "react";
 import ClienteService from "../services/ClienteService";
+import Validatore from "../services/ValidatoreSignIn";
 import { Cliente } from "../type/Object.type";
 
 export const RegistraCliente: React.FC = () => {
@@ -28,10 +29,10 @@ export const RegistraCliente: React.FC = () => {
   const [messErrore, setMessErrore] = useState<String>();
 
   const register = () => {
-    if (validateEmail()) {
-      if (validatePassword()) {
-        if (nome && cognome) {
-          setMessErrore("");
+    if (password && email && nome && cognome) {
+      setMessErrore("");
+      if (validateEmail()) {
+        if (validatePassword()) {
           const cliente: Cliente = {
             nome: nome,
             cognome: cognome,
@@ -47,35 +48,29 @@ export const RegistraCliente: React.FC = () => {
   };
 
   const validateEmail = () => {
-    if (email) {
-      const re =
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      let emailTest = re.test(String(email).toLowerCase());
-      if (emailTest !== true) {
-        setEmailErr("Inserire una email valida");
-        return false;
-      } else {
-        setEmailErr("");
-        return true;
-      }
-    } else return false;
+    if (Validatore.validateEmail(email!)) {
+      setEmailErr("");
+      return true;
+    } else {
+      setEmailErr("Inserire una email valida");
+      return false;
+    }
   };
 
   const validatePassword = () => {
-    if (password) {
-      if (password === confermaPass) {
-        if (password.length > 12 || password.length < 8)
-          setPassErr("La Password deve essere compresa tra 8 e 12 caratteri");
-        else {
-          setPassErr("");
-          return true;
-        }
-      } else {
-        setPassErr("Le Password non coincidono!");
-        return false;
-      }
+    let forzaPassword = Validatore.validatePassword(password!, confermaPass!);
+    if (forzaPassword === 0) {
+      setPassErr("La Password deve essere compresa tra 8 e 12 caratteri!");
+    } else if (forzaPassword === 1) {
+      setPassErr("Le Password non coincidono!");
+    } else if (forzaPassword < 5) {
+      setPassErr(
+        "La password deve contenere almeno una lettera minuscola, una maiuscola, un numero ed un carattere speciale!"
+      );
+    } else {
+      setPassErr("");
+      return true;
     }
-    return false;
   };
 
   return (

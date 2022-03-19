@@ -33,7 +33,7 @@ export const CreazioneAcquisto: React.FC = () => {
         CommercianteService.creaAcquisto(acquisto);
       } else setMessErrore("Scegliere una dimensione");
     } else {
-      setMessErrore("Inserire un numero");
+      setMessErrore("Inserire l'id Cliente");
     }
   };
 

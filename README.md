@@ -13,11 +13,11 @@ C3-PAWM è una Progressive Web App sviluppata principalmente per l'uso da mobile
 
 Lo sviluppo del sistema si basa sull'implementazione del pattern architetturare [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
-Il fronten è stato realizzato con Typescript, React ed il frameword Ionic.
+Il fronten è stato realizzato con Typescript, React ed il framework Ionic.
 
 Il [backend e relativi microservizi](https://github.com/nicolas-cotichini/C3) sono stati realizzati in Java tramite la suite di tecnologie e framework configurate tramite SpringBoot.
 
-Il dialogo tra frontend e backend avviene mediante chiamate Rest, la cui sicurezza è affidata all'uso di JSON Web Token.
+Il dialogo tra frontend e backend avviene mediante chiamate Rest, la cui sicurezza ed autorizzazione è affidata all'uso di JSON Web Token.
 
 La gestione delle password è stata affidata alla funzione di hashing BCrypt con "forza" 10.
 
