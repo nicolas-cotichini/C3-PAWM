@@ -4,7 +4,6 @@ import {
   IonCol,
   IonHeader,
   IonIcon,
-  IonImg,
   IonLabel,
   IonRouterOutlet,
   IonRow,

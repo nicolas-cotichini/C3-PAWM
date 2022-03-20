@@ -1,6 +1,5 @@
 import axios from "axios";
 import authHeader from "../auth/AuthHeader";
-import AuthService from "../auth/AuthService";
 
 const API_URL = "http://localhost:8080/locker/";
 

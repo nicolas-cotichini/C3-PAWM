@@ -14,7 +14,7 @@ import {
   IonSelectOption,
 } from "@ionic/react";
 import { useState } from "react";
-import { LuogoTipo, PersonaleTipo } from "../../type/Object.type";
+import { PersonaleTipo } from "../../type/Object.type";
 import ListaPersonale from "./ListaPersonale";
 
 export const EliminazionePersonale: React.FC = () => {
